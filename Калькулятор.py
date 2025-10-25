@@ -11,11 +11,16 @@ def Div(a,b):
     if(b==0): return "На ноль делить нельзя"
     else: return a/b
 
-print(sum(10,20))#выведет 30
-print(sub(20,10))#выведет 10
-print(Multiply(10,5))#выведет 50
-print(Div(50,10))#выведет 5
-#(v1.3.1) - В функции деления мы исправили баг с делением на 0
+def calc(a,b,str):
+    if(str=="Сложить"): return sum(a,b)
+    elif(str=="Вычесть(отнять)"): return sub(a,b)
+    elif(str=="Умножить"):return Multiply(a,b)
+    else: return Div(a,b)
+
+
+print(calc(30,12,"Сложить"))
+#(v2.0.0) - Полностью обновленное приложение,в котором мы можем выбирать операцию над числами
+
 
 
 
